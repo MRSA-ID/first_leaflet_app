@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import "leaflet/dist/leaflet.css";
+import Maps from "./components/Maps";
+import MapsGeoJson from "./components/MapsGeoJson";
 
 function App() {
+  const marker = {
+    lat: -6.315659,
+    lng: 106.925204,
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <h1>Map Layering Control</h1>
+        <Maps marker={marker} />
+      </div>
+      <div className="destination">
+        <h1>Maps Fetching Data GeoJSON</h1>
+        <MapsGeoJson />
+      </div>
     </div>
   );
 }
