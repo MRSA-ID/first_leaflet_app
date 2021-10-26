@@ -1,7 +1,7 @@
 import React from "react";
 import image from "../assets/map-marker.png";
 import {
-  Map,
+  MapContainer,
   TileLayer,
   Popup,
   Marker,
@@ -26,7 +26,7 @@ const Maps = ({ marker }) => {
   const circleGeo = [-6.917092889041664, 107.63796592359316];
   return (
     <div>
-      <Map
+      <MapContainer
         center={home}
         zoom={8}
         scrollWheelZoom={false}
@@ -71,7 +71,7 @@ const Maps = ({ marker }) => {
             </FeatureGroup>
           </LayersControl.Overlay>
         </LayersControl>
-      </Map>
+      </MapContainer>
     </div>
   );
 };

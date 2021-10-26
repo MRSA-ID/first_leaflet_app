@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import "leaflet/dist/leaflet.css";
 import Maps from "./components/Maps";
 import MapsGeoJson from "./components/MapsGeoJson";
+import MapVectorGrid from "./components/MapVectorGrid";
 
 function App() {
   const marker = {
@@ -19,6 +19,10 @@ function App() {
       <div className="destination">
         <h1>Maps Fetching Data GeoJSON</h1>
         <MapsGeoJson />
+      </div>
+      <div className="destination">
+        <h1>Maps Vector Grid</h1>
+        <MapVectorGrid />
       </div>
     </div>
   );
